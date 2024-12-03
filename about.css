@@ -1,0 +1,361 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
+
+* {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  
+  padding: 0;
+  margin: 0;
+  font-family: 'Cabinet Grotesk', sans-serif;
+  line-height: 1.6;
+  background-color: #f7f7f7;
+  color: #333333;
+}
+
+nav {
+  padding: 5px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  z-index: 1;
+}
+nav .logo {
+  display: flex;
+  align-items: center;
+}
+nav .logo img {
+  height: 25px;
+  width: auto;
+  margin-right: 10px;
+}
+
+
+nav .logo h1 {
+  font-size: 1.1rem;
+  background: linear-gradient(to right, #b927fc 0%, #2c64fc 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+nav ul li {
+  margin-left: 1.5rem;
+}
+nav ul li a {
+  text-decoration: none;
+  color: #000;
+  font-size: 95%;
+  font-weight: 400;
+  padding: 4px 8px;
+  border-radius: 5px;
+}
+
+nav ul li a:hover {
+  background-color: #DC143C;
+  color: #fff;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.hamburger .line {
+  width: 25px;
+  height: 1px;
+  background-color: #DC143C;
+  display: block;
+  margin: 7px auto;
+  transition: all 0.3s ease-in-out;
+}
+.hamburger-active {
+  transition: all 0.3s ease-in-out;
+  transition-delay: 0.6s;
+  transform: rotate(45deg);
+}
+
+.hamburger-active .line:nth-child(2) {
+  width: 0px;
+}
+
+.hamburger-active .line:nth-child(1),
+.hamburger-active .line:nth-child(3) {
+  transition-delay: 0.3s;
+}
+
+.hamburger-active .line:nth-child(1) {
+  transform: translateY(12px);
+}
+
+.hamburger-active .line:nth-child(3) {
+  transform: translateY(-5px) rotate(90deg);
+}
+
+.menubar {
+  position: absolute;
+  top: 0;
+  left: -60%;
+  font-family: 'Cabinet Grotesk', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 60%;
+  height: 100vh;
+  padding: 20% 0;
+  background: rgba(255, 255, 255);
+  transition: all 0.5s ease-in;
+  z-index: 2;
+}
+.active {
+  left: 0;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.menubar ul {
+  padding: 0;
+  list-style: none;
+}
+.menubar ul li {
+  margin-bottom: 32px;
+}
+
+.menubar ul li a {
+  text-decoration: none;
+  color: #000;
+  font-size: 95%;
+  font-weight: 400;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.menubar ul li a:hover {
+  background-color: #DC143C;
+  color: #fff;
+}
+@media screen and (max-width: 790px) {
+  .hamburger {
+    display: block;
+  }
+  nav ul {
+    display: none;
+  }
+}
+
+/* General Styling */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  /* background-color: #f4f4f4; */
+}
+
+/* Navbar Styling (Consistent with Provided Navbar Styles) */
+nav {
+  padding: 5px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  z-index: 10; /* Ensure the navbar stays above the slider */
+   background: rgba(255, 255, 255, 0.9); 
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+
+nav .logo h1 {
+  font-size: 1.1rem;
+  background: linear-gradient(to right, #b927fc 0%, #2c64fc 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+nav ul li a:hover {
+  background-color: #DC143C;
+  color: #fff;
+}
+
+
+
+
+
+
+
+/* General Reset */
+
+
+
+
+/* Bio Section Styling */
+.bio-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 20px;
+  background-color: #ffffff; /* White background */
+}
+
+.bio-content {
+  display: flex;
+  max-width: 1200px;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+/* Image Section */
+.bio-image {
+  position: relative;
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bio-image img {
+  width: 100%;
+  max-width: 300px;
+  height: 100%;
+  border-radius: 10px;
+  object-fit: fill;
+  transition: filter 0.3s ease;
+}
+
+.bio-image img:hover {
+  float: right;
+}
+
+/* Text Section */
+.bio-text {
+  flex: 2;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+.bio-text h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #DC143C; /* Accent color matching your site */
+}
+
+.bio-text h3 {
+  font-size: 20px;
+  margin-top: 20px;
+  color: #557751;
+}
+
+.bio-text p {
+  margin-bottom: 15px;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .bio-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .bio-image img {
+    max-width: auto;
+  }
+
+  .bio-text h2 {
+    font-size: 24px;
+  }
+
+  .bio-text p {
+    font-size: 14px;
+  }
+}
+
+/* Scroll Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+/*footer part*/
+
+
+/* Footer Section */
+.footer {
+  background: #396035;
+  
+ 
+  color: #fff; /* White text */
+  text-align: center;
+  padding: 20px 10px;
+  border-top: 7px solid #DA1F27; 
+  border-radius: 5px 5px 0 0;
+  /* Accent border */
+}
+
+/* Footer Logo Styling */
+.footer-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.footer-logo img {
+  height: 40px; /* Adjust based on logo size */
+  margin-bottom: 10px;
+}
+
+.footer-logo h1 {
+  font-size: 18px;
+  color: #fff; /* White text for footer brand */
+}
+
+.location {
+  display: flex;
+  justify-content: center;
+  align-items: right;
+  margin-bottom: 15px;
+}
+
+/* Footer Bottom Section */
+.footer-bottom {
+  font-size: 12px;
+  color: #ddd; /* Subtle grey */
+}
+
+
+
+.footer-bottom a:hover {
+  color: #fff; /* Hover effect for back-to-top */
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .footer-nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-nav li {
+    margin: 10px 0;
+  }
+}
