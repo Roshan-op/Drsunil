@@ -14,6 +14,8 @@ body {
   padding: 0;
   margin: 0;
   font-family: 'Cabinet Grotesk', sans-serif;
+  background: rgb(57,96,53);
+  background: linear-gradient(0deg, rgba(57,96,53,1) 0%, rgba(218,31,39,1) 100%);
 }
 
 /* pre LOader theme*/
@@ -34,7 +36,7 @@ nav .logo {
   align-items: center;
 }
 nav .logo img {
-  height: 25px;
+  height: 50px;
   width: auto;
   margin-right: 10px;
 }
@@ -192,31 +194,32 @@ nav ul li a:hover {
 
 /* Hero Section */
 .hero {
-  background: linear-gradient(to bottom right, #DA1F27,#396035);
+  position: relative;
   color: #fff;
   padding: 50px 20px;
   text-align: center;
 }
 
 .hero h2 {
-  font-size: 36px;
+  font-size: 100px;
   margin-bottom: 10px;
 }
 
 .hero p {
-  font-size: 18px;
+  font-size: 78px;
 }
 
 /* Gallery Section */
 .gallery {
+  margin-top: 0px;
   padding: 50px 20px;
 }
 
 .section-title {
   text-align: center;
-  font-size: 28px;
+  font-size: 100px;
   margin-bottom: 30px;
-  color: #DA1F27;
+  color: #fff;
 }
 
 .gallery-grid {
