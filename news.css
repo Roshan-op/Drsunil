@@ -108,7 +108,40 @@ nav {
     left: 0;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   }
-  
+
+
+.menubar ul {
+  padding: 0;
+  list-style: none;
+}
+.menubar ul li {
+  margin-bottom: 32px;
+}
+
+.menubar ul li a {
+  text-decoration: none;
+  color: #000;
+  font-size: 95%;
+  font-weight: 400;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.menubar ul li a:hover {
+  background-color: #DA1F27;
+  color: #fff;
+}
+@media screen and (max-width: 790px) {
+  .hamburger {
+    display: block;
+  }
+  nav ul {
+    display: none;
+  }
+}
+
+
+
 /* Masonry Styles */
 .masonry-container {
     color: #fff;
